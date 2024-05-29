@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+    <link rel="stylesheet" href="./css/apply.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="#" method="post" enctype="multipart/form-data" class="form" id="form">
+            <div class="page1">
+                <h2>Personal Information</h2>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">First Name</label>
+                        <input type="text" name="fname" placeholder="First Name" required>
+                    </div>
+                    <div class="input">
+                        <label class="title">Last Name</label>
+                        <input type="text" name="lname" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">Birthday</label>
+                        <input type="date" name="dob" placeholder="dob" required>
+                    </div>
+                    <div class="input">
+                        <label class="title">Gender</label>
+                        <select name="gender">
+                            <option>Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">Email</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input">
+                        <label class="title">Mobile</label>
+                        <input type="number" name="mobile" placeholder="Number" required>
+                    </div>
+                </div>
+                <h2>Documents</h2>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">Your Photo</label>
+                        <input type="file" name="user_pic" id="photo" hidden onchange="getname1(this.value)" required>
+                        <label for="photo" class="file">
+                            <p id="file1">No file selected</p>
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label class="title">College Id</label>
+                        <input type="file" name="college_id" id="cid" hidden onchange="getname2(this.value)" required>
+                        <label for="cid" class="file">
+                            <p id="file2">No file selected</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">Addhar Card</label>
+                        <input type="file" name="aadhar_card" id="addhar" hidden onchange="getname3(this.value)"
+                            required>
+                        <label for="addhar" class="file">
+                            <p id="file3">No file selected</p>
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label class="title">Bonofide</label>
+                        <input type="file" name="bonofide" id="bono" hidden onchange="getname4(this.value)" required>
+                        <label for="bono" class="file">
+                            <p id="file4">No file selected</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button id="next">Next</button>
+                </div>
+
+            </div>
+            <div class="page2">
+
+                <h2>Address</h2>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">State</label>
+                        <input type="text" name="state" placeholder="State" required>
+                    </div>
+                    <div class="input">
+                        <label class="title">City</label>
+                        <input type="text" name="city" placeholder="City" required>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">Zipcode</label>
+                        <input type="number" name="zipcode" placeholder="Zipcode" required>
+                    </div>
+                    <div class="input"></div>
+                </div>
+                <h2>Select pass types</h2>
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">Pass type</label>
+                        <select name="pass_type" id="passs">
+                            <option>Select</option>
+                            <option value="Full">Full</option>
+                            <option value="Punching">Punching</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label class="title">Duration</label>
+                        <select name="duration">
+                            <option>Select</option>
+                            <option value="1-month">1 Month</option>
+                            <option value="3-month">3 Month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h2 id="toHide">Enter your Destination</h2>
+
+                <div class="input-container" id="toHide2">
+                    <div class="input">
+                        <label class="title">Start</label>
+                        <input type="text" name="start" placeholder="Start" id="req" required>
+                    </div>
+                    <div class="input">
+                        <label class="title">Stop</label>
+                        <input type="text" name="stop" placeholder="Stop" id="req2" required>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button id="prev">Prev</button>
+                    <button name="apply">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function rep(name) {
+            let n = name.replace(/^.*\\/, "");
+            return n;
+        };
+
+        function getname1(name) {
+            $('#file1').html(rep(name));
+        }
+
+        function getname2(name) {
+            $('#file2').html(rep(name));
+        }
+
+        function getname3(name) {
+            $('#file3').html(rep(name));
+        }
+
+        function getname4(name) {
+            $('#file4').html(rep(name));
+        }
+        let $page = $('.page1');
+        let $next = $('#next');
+        let $prev = $('#prev');
+
+        $next.click(() => {
+            $page.css('marginLeft', '-100%');
+        });
+        $prev.click(() => {
+            $page.css('marginLeft', '-0%');
+        });
+
+        let pass_type = document.querySelector('#passs'),
+            hide = document.getElementById('toHide'),
+            hide2 = document.getElementById('toHide2'),
+            req = document.getElementById('req'),
+            req2 = document.getElementById('req2');
+
+        pass_type.addEventListener('change', () => {
+            let pt = pass_type.value;
+            if (pt === "Full") {
+                console.log(pt);
+                hide.style.display = 'none';
+                hide2.style.display = 'none';
+                req.removeAttribute('required');
+                req2.removeAttribute('required');
+            } else {
+                hide.style.display = '';
+                hide2.style.display = '';
+                req.setAttribute('required', 'required');
+                req2.setAttribute('required', 'required');
+            }
+        });
+    </script>
+</body>
+
+</html>

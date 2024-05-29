@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Css end-->
+
+    <!-- js start -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- js end -->
+</head>
+
+<body>
+    <!-- Loader start -->
+    <div class="loader">
+        <img src="./images/route-loading.gif">
+    </div>
+    <!-- Loader  end -->
+    <!-- Navigation Start-->
+    <nav>
+        <div class="logo">
+            <img src="./images/logo2.png" alt="logo">
+        </div>
+        <ul class="nav-list">
+
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./helpline.html">Helpline</a></li>
+
+            <li class="nav-respone"><a href="./Users-logout.php">Logout</a></li>
+
+            <li>
+                <div class="fas fa-user">
+                    <img src="./images/default-user.jpg">
+                </div>
+            </li>
+        </ul>
+        <div class="profile-cont">
+
+            <ul class="profile" style="opacity: 1;visibility: visible;">
+                <li><b>
+                        Padam Gadshila
+                    </b></li>
+                <li> <a href="./Users-logout.php">Logout</a></li>
+            </ul>
+
+        </div>
+        <div class="fas fa-bars">
+
+            <img src="./images/default-user.jpg">
+
+
+        </div>
+    </nav>
+    <!-- Navigation End-->
+    <br>
+    <!-- Banners Start -->
+    <div class="banner">
+        <img src="./images/routpass-banner.jpg">
+    </div>
+    <div class="banner2">
+        <img src="./images/pass.png" class="ban2">
+    </div>
+    <!-- Banners End -->
+
+    <!-- Services start  -->
+    <div class="services" id="services">
+        <br>
+        <h2>Services</h2>
+        <div class="options">
+            <div class="pass">
+                <div class="option-img">
+                    <img src="./images/apply-pass.png">
+                </div>
+
+                <a href="./apply.html">Apply Pass</a>
+
+            </div>
+            <div class="pass">
+                <div class="option-img">
+                    <img src="./images/renew-pass.png">
+                </div>
+
+                <a href="#renew" class="renewPass">Renew Pass</a>
+
+            </div>
+            <div class="pass">
+                <div class="option-img">
+                    <img src="./images/update-pass.png">
+                </div>
+
+                <a href="./update.html">Update Pass</a>
+
+            </div>
+            <div class="pass">
+                <div class="option-img">
+                    <img src="./images/downloa-pass.png">
+                </div>
+
+                <a href="./Padam Gadshila.pdf" download>Download Pass</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- Renew start -->
+    <div class="renew">
+        <i class="fas fa-x"></i>
+        <div class="form-container">
+            <form action="renew.php" method="post">
+                <div class="input-container">
+                    <div class="input">
+                        <label class="title">Enter pass no</label>
+                        <input type="number" name="passId" placeholder="Pass no" required>
+                    </div>
+                    <div class="input">
+                        <label class="title">Enter duration</label>
+                        <select name="duration">
+                            <option>Select</option>
+                            <option value="1-month">1 Month</option>
+                            <option value="3-month">3 Month</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button name="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Renew end -->
+    <!-- Services end  -->
+
+    <!-- Content start -->
+    <div class="container">
+        <div class="left-sub-container">
+            <img src="./images/eco public transport.jpg" alt="image">
+        </div>
+        <div class="right-sub-container">
+            <div class="content">
+                <br>
+                <h1> <span>Electric Buses </span>In Public Transportation</h1>
+                <p>The Government of India has set targets to reduce the economy's carbon intensity by 45% by 2030 and
+                    achieve net zero emissions by 2070. It is possible only through the mass adoption of EVs, especially
+                    in the public transportation system. Out of the 5,60,493 EVs sold in India (from January 2022 to
+                    August 2022), two-wheelers and three-wheelers accounted for 94% of the total, four-wheelers 5%, and
+                    e-buses 0.2%. Since e-buses account for a minor share of the EVs sold in the country, a monthly
+                    increase in the vehicle fleet is warranted to achieve the net zero emissions target by 2070. As of
+                    Q1 FY23, 467 e- buses have been sold, with a sequential increase of 39% and a YoY increase of 51%.
+                </p>
+            </div>
+            <!-- <hr>    -->
+            <div class="content-img">
+                <h3><span>E-Buses</span> Solds In India</h3>
+                <br>
+
+                <img src="./images/ebuses solds in india.jpg" alt="ebuses solds in india">
+            </div>
+        </div>
+
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="ftimg">
+            <img src="./images/route pass.png" alt="image">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus saepe cumque ratione quisquam
+                veniam tenetur ipsum molestiae praesentium laudantium reiciendis!</p>
+        </div>
+        <div class="ftcontent">
+            <h3>Navigation</h3>
+            <a href="./index.php">Home</a>
+            <a href="#">About</a>
+            <a href="./index.php#services">Services</a>
+            <a href="#">Blog</a>
+            <a href="#">Support</a>
+        </div>
+        <div class="ftcontent">
+            <h3>Services</h3>
+            <a href="#">Full RoutePass</a>
+            <a href="#">Punch Pass</a>
+            <a href="#">Other Pass</a>
+        </div>
+        <div class="ftcontent">
+            <h3>Contact Us</h3>
+            <h4>Team RoutePass</h4>
+            <h2>+91-0001234567</h2>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Copyright start -->
+    <div class="copyright">
+        <h5>Copyright @2023 All Rights Reserved: Team RoutePass</h5>
+    </div>
+    <!-- Copyright end -->
+
+    <!-- Scripts -->
+    <script>
+        // Renew pass 
+        let btn = document.querySelector('.renewPass'),
+            renew = document.querySelector('.renew'),
+            x = document.querySelector('.fa-x');
+        btn.addEventListener('click', () => {
+            window.scrollTo(0, 0);
+            renew.classList.add('renew-show');
+            setTimeout(() => {
+                $('body').addClass('stop-scrolling');
+            }, 500);
+        });
+        x.addEventListener('click', () => {
+            renew.classList.remove('renew-show')
+            window.scrollTo(0, 450)
+            $('body').removeClass('stop-scrolling');
+        });
+        // Side navigation
+        let menu = document.querySelector('.fa-bars'),
+            navigation = document.querySelector('.nav-list');
+
+        menu.addEventListener('click', () => {
+            navigation.classList.toggle('nav-list-slide');
+        });
+
+        // profile slide
+        let person = document.querySelector('.fa-user'),
+            profile = document.querySelector('.profile-cont');
+
+        person.addEventListener('click', () => {
+            profile.classList.toggle('profile-slide');
+        });
+        window.addEventListener('scroll', () => {
+            profile.classList.remove('profile-slide');
+        })
+        // Loader
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        })
+        $(document).ready(() => {
+            setTimeout(() => {
+                $('.loader').css('display', 'none');
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>
